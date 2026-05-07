@@ -1,0 +1,7 @@
+C:\Users\alumno\Documents\Trabajos C#\[MartinMolina]-Act6\Punto 4\bin\Debug\Punto 4.exe.config
+C:\Users\alumno\Documents\Trabajos C#\[MartinMolina]-Act6\Punto 4\bin\Debug\Punto 4.exe
+C:\Users\alumno\Documents\Trabajos C#\[MartinMolina]-Act6\Punto 4\bin\Debug\Punto 4.pdb
+C:\Users\alumno\Documents\Trabajos C#\[MartinMolina]-Act6\Punto 4\obj\Debug\Punto 4.csproj.AssemblyReference.cache
+C:\Users\alumno\Documents\Trabajos C#\[MartinMolina]-Act6\Punto 4\obj\Debug\Punto 4.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Documents\Trabajos C#\[MartinMolina]-Act6\Punto 4\obj\Debug\Punto 4.exe
+C:\Users\alumno\Documents\Trabajos C#\[MartinMolina]-Act6\Punto 4\obj\Debug\Punto 4.pdb
