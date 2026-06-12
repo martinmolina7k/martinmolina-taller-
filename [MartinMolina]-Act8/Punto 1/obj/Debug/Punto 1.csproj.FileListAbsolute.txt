@@ -1,7 +1,0 @@
-C:\Users\Alumno\source\repos\[MartinMolina]-Act8\Punto 1\bin\Debug\Punto 1.exe.config
-C:\Users\Alumno\source\repos\[MartinMolina]-Act8\Punto 1\bin\Debug\Punto 1.exe
-C:\Users\Alumno\source\repos\[MartinMolina]-Act8\Punto 1\bin\Debug\Punto 1.pdb
-C:\Users\Alumno\source\repos\[MartinMolina]-Act8\Punto 1\obj\Debug\Punto 1.csproj.AssemblyReference.cache
-C:\Users\Alumno\source\repos\[MartinMolina]-Act8\Punto 1\obj\Debug\Punto 1.csproj.CoreCompileInputs.cache
-C:\Users\Alumno\source\repos\[MartinMolina]-Act8\Punto 1\obj\Debug\Punto 1.exe
-C:\Users\Alumno\source\repos\[MartinMolina]-Act8\Punto 1\obj\Debug\Punto 1.pdb

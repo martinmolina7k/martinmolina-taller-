@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -54,7 +53,8 @@ namespace Punto_1
             else
             {
                 Console.WriteLine("El menor valor no se repite.");
-                Console.ReadKey(); 
+                Console.ReadKey();
+
             }
         }
     }
