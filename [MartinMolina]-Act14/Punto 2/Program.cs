@@ -6,61 +6,100 @@ using System.Threading.Tasks;
 
 namespace Punto_2
 {
-    
     //2. Control de Vuelos
-      // Plantear una clase llamada Pasajero que tenga los atributos privados: Nombre, DNI y EquipajeKilos (peso del equipaje en kg). En su constructor, solicitar la carga de estos tres datos.
-      // Luego, confeccionar una clase llamada Vuelo que administre un vector de 4 objetos de la clase Pasajero. Su constructor debe inicializar el vector y solicitar la carga por teclado de cada uno de los 4 pasajeros.
-      // Agregar los siguientes métodos en la clase Vuelo:
-      //  Un método que calcule y muestre el peso total de equipaje que transporta el avión (la suma de todos los pesos).
-      // Un método que informe si algún pasajero excede el límite permitido de equipaje (mayor a 23 kg), imprimiendo su nombre y su DNI.
+//Plantear una clase llamada Pasajero que tenga los atributos privados: Nombre, DNI y EquipajeKilos (peso del equipaje en kg). En su constructor, solicitar la carga de estos tres datos.
+//Luego, confeccionar una clase llamada Vuelo que administre un vector de 4 objetos de la clase Pasajero. Su constructor debe inicializar el vector y solicitar la carga por teclado de cada uno de los 4 pasajeros.
+//Agregar los siguientes métodos en la clase Vuelo:
+//Un método que muestre un listado completo con los datos de todos los pasajeros del vuelo.
+//Un método que informe si algún pasajero excede el límite permitido de equipaje (mayor a 23 kg), imprimiendo su nombre y su DNI.
 
 
-    class Pasajero
+    internal class Pasajero
     {
-        private string nombre;
-        private int DNI;
-        private float EquipajeKilos;
+        private string Nombre;
+        private int Dni;
+        private double EquipajeKilos;
 
         public Pasajero()
         {
-            string linea;
+            Console.WriteLine("ingrese el nombre del pasajero");
+            Nombre = Console.ReadLine();
+            Console.WriteLine("ingrese el dni");
+            string linea = Console.ReadLine();
+            Dni = int.Parse(linea);
+            Console.WriteLine("ingrese el peso de su equipaje");
+            linea = Console.ReadLine();
+            EquipajeKilos = double.Parse(linea);
+        }
 
-            Console.WriteLine("Ingrese el nombre del pasajero ");
-            linea = Console.ReadLine();
-            nombre = linea;
-            Console.WriteLine("Ingrese su DNI ");
-            linea = Console.ReadLine();
-            DNI = int.Parse(linea);
-            Console.WriteLine("Ingrese el peso de su equipaje ");
-            linea = Console.ReadLine();
-            EquipajeKilos = float.Parse(linea);
+        public string NombreP()
+        {
+            return Nombre;
+        }
+
+        public int DniP()
+        {
+            return Dni;
+        }
+
+        public double Peso()
+        {
+            return EquipajeKilos;
         }
     }
 
-
-    class Vuelo
+    internal class Vuelo
     {
-        private Pasajero[] Pasajero = new Pasajero[4];
-
+        private Pasajero[] pasajeros;
 
         public Vuelo()
         {
-            for (int i = 0; i > 4; i++)
+            pasajeros = new Pasajero[4];
+            for (int i = 0; i < pasajeros.Length; i++)
             {
-                Pasajero[i] = new Pasajero();
+                pasajeros[i] = new Pasajero();
+            }
+        }
+
+        public void ImprimirLista()
+        {
+            for (int i = 0; i < pasajeros.Length; i++)
+            {
+                Console.WriteLine($"{pasajeros[i].NombreP()} dni:{pasajeros[i].DniP()} peso:{pasajeros[i].Peso()} kg");
+            }
+        }
+
+        public void PesoTotal()
+        {
+            double total = 0;
+            for (int i = 0; i < pasajeros.Length; i++)
+            {
+                total += pasajeros[i].Peso();
+            }
+            Console.WriteLine($"el peso total en el vuelo es de {total} kilos");
+        }
+
+        public void ExcesoPeso()
+        {
+            for (int i = 0; i < pasajeros.Length; i++)
+            {
+                if (pasajeros[i].Peso() > 23)
+                {
+                    Console.WriteLine($"el pasajero {pasajeros[i].NombreP()} de dni {pasajeros[i].DniP()} se excedio del peso permitido");
+                }
             }
         }
 
 
 
-
-
-
-
-
-
         static void Main(string[] args)
         {
+            Vuelo vuelo = new Vuelo();
+            vuelo.ImprimirLista();
+            vuelo.PesoTotal();
+            vuelo.ExcesoPeso();
+            Console.ReadKey();
         }
     }
 }
+
